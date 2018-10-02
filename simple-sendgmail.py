@@ -22,5 +22,5 @@ server.set_debuglevel(1)
 server.starttls()
 server.ehlo
 server.login(email, password)
-server.sendmail(email, environ.get('RECIPIENT'), msg)
+server.sendmail(email, environ.get('RECIPIENT').split(','), msg)
 server.quit()
